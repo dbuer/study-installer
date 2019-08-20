@@ -1,186 +1,136 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Instruction Page</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="instructions.css" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+        <title>
+            Security Assistant Study - University of California, Berkeley
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./berkeley_brand/css/components.css" />
+        <link rel="stylesheet" href="./berkeley_brand/css/layout.css" />
+        <link rel="stylesheet" href="./berkeley_brand/css/nav.css" />
+        <link rel="stylesheet" href="./berkeley_brand/css/site.css" />
+        <link rel="stylesheet" href="./berkeley_brand/css/typography.css" />
+        <link rel="stylesheet" href="./berkeley_brand/css/bootstrap.min.css" />
+        
         <script src="profiler.js" type="text/javascript"></script>
         <script src="instructions.js" type="text/javascript"></script>
     </head>
-    <body>
-    
-    <main role="main" class="container">
-        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-            <label class="btn btn-secondary active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> MacOS
-            </label>
-            <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2" autocomplete="off"> Windows
-            </label>
-        </div>
-        <div id="macos">
-            <div class="instruction-page">
-                <h1>Manual Installation Instructions</h1>
-                <h4>Click each instruction for more information.</h4>
-            </div>
-            <div class="accordion" id="instruction-accordion">
-                <div class="card">
-                    <div class="card-header" id="headingZero">
-                        <h2 class="mb-0">
-                            <button class="btn btn-block text-left dropdown-toggle" type="button" data-toggle="collapse" data-target="#collapseZero" aria-expanded="true" aria-controls="collapseZero">
-                                1. Download our extension.
-                            </button>
-                        </h2>
-                    </div>
-
-                    <div id="collapseZero" class="collapse" aria-labelledby="headingZero" data-parent="#instruction-accordion">
-                        <div class="card-body">
-                            a. Click for direct download: 
-                            <button class="btn btn-primary" type="button">Download</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h2 class="mb-0">
-                            <button class="btn btn-block text-left dropdown-toggle" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                2. Install Firefox Developer Edition.
-                            </button>
-                        </h2>
-                    </div>
-
-                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#instruction-accordion">
-                        <div class="card-body">
-                            <p>a. Go to <a href="https://www.mozilla.org/en-US/firefox/developer/">https://www.mozilla.org/en-US/firefox/developer/</a></p>
-                            <p>b. Click the download button in the middle of the screen.<br>
-                                <img src="images/download1.png" class="img-fluid" alt="Responsive image"></p>
-                            <p>c. This window will popup, select Open with DiskImageMounter and click OK.<br>
-                                <img src="images/download2.png" class="img-fluid" alt="Responsive image"></p>
-                            <p>d. Drag the Firefox icon onto the folder to finish installing.<br>
-                                <img src="images/download3.png" class="img-fluid" alt="Responsive image"></p>
-                            <p>e. Now open your Applications folder and drag firefox to your dock for easy access.<br>
-                                <img src="images/download4.png" class="img-fluid" alt="Responsive image"></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h2 class="mb-0">
-                            <button class="btn btn-block text-left dropdown-toggle" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                                3. Change config setting <strong>xpinstall.signatures.required</strong> to false.
-                            </button>
-                        </h2>
-                    </div>
-
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#instruction-accordion">
-                        <div class="card-body">
-                            <p>a. Type <strong>about:config</strong> into the URL Bar and press enter</p>
-                            <p>b. A warning will pop up saying that this may “void your warranty,” you have nothing to worry about as long as you follow our instructions.<br> Click “I accept the risk!”<br>
-                                <img src="images/warranty.png" class="img-fluid" alt="Responsive image">
-                            </p>
-                            <p>c. In the search bar type <strong>xpinstall.signatures.required</strong></p>
-                            <p>d. Double click the result row and make sure the “value” is set to <strong>false</strong><br>
-                                <img src="images/config1.png" class="img-fluid" alt="Responsive image">
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h2 class="mb-0">
-                            <button class="btn btn-block text-left dropdown-toggle" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                4. Change config setting <strong>extensions.legacy.enabled</strong> to true.
-                            </button>
-                        </h2>
-                    </div>
-
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#instruction-accordion">
-                        <div class="card-body">
-                            <p>a. Type <strong>about:config</strong> into the URL Bar and press enter</p>
-                            <p>b. A warning will pop up saying that this may “void your warranty,” you have nothing to worry about as long as you follow our instructions.<br> Click “I accept the risk!”<br>
-                                <img src="images/warranty.png" class="img-fluid" alt="Responsive image">
-                            </p>
-                            <p>c. In the search bar type <strong>extensions.legacy.enabled</strong></p>
-                            <p>d. Double click the result row and make sure the “value” is set to <strong>true</strong><br>
-                                <img src="images/config2.png" class="img-fluid" alt="Responsive image">
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header" id="headingFour">
-                        <h2 class="mb-0">
-                            <button class="btn btn-block text-left dropdown-toggle" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                5. Install our addon.
-                            </button>
-                        </h2>
-                    </div>
-
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#instruction-accordion">
-                        <div class="card-body">
-                            <p>a. Type <strong>about:addons</strong> into the URL Bar and press enter</p>
-                            <p>b. Click the drop down gearbox, next to “Manage your Extensions”</p>
-                            <p>c. Select, “Install Add-on From File…”<br>
-                                <img src="images/addons1.png" class="img-fluid" alt="Responsive image">
-                            </p>
-                            <p>d. Navigate to where you downloaded our extension (defaults to downloads folder) and open.<br>
-                                <img src="images/addons2.png" class="img-fluid" alt="Responsive image">
-                            </p>
-                            <p>e. There will be a caution popup because the extension is experimental, click “Add”<br>
-                                <img src="images/addons3.png" class="img-fluid" alt="Responsive image">
-                            </p>
-                            <p>f. (Optional) Check the box to allow our extension in private browsing mode then “Okay”<br>
-                                <img src="images/addons4.png" class="img-fluid" alt="Responsive image">
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header" id="headingFive">
-                        <div class="mb-0 ml-3">
-                            6. Make sure to use this browser version for the remainder of the study in order to receive payment.
-                        </div>
+    <body class="home">
+        <header id="site-header" class="subbrand light">
+            <div class="navbar navbar-default navbar-static-top yamm">
+                <div class="container">
+                    <div class="navbar-header one-line">
+                        <h1>
+                            <span class="b-wordmark" aria-hidden="true"></span>
+                            <span class="dept-title one"
+                                >Security Assistant Study</span
+                            >
+                        </h1>
                     </div>
                 </div>
             </div>
-            <div class="text-center m-4">
-                <h1>Automatic Installation Instructions</h1>
-            </div>
-            <div class="accordion" id="automatic-accordion"> 
-                <div class="card mb-4">
-                    <div class="card-header" id="headingSix">
-                        <div class="mb-0">
-                                <button class="btn btn-block text-left dropdown-toggle" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                    1. Download and run our installer package.
-                                </button>
+        </header>
+
+        <div id="content" class="site-content" role="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mt-4">
+                        <h2>Study Installation Instructions</h2>
+                        <div id="chrome-mac">
+                            <div class="accordion" id="accordionInstructions">
+                                <div class="card">
+                                    <div class="card-header" id="download">
+                                        <a class="btn btn-block text-left" href="https://drive.google.com/uc?export=download&id=1hcROr9NSv8PSmlb4LMkmsbLvjBXOrOZ3">
+                                            <h5 class="m-0">1. Click here to download the addon.</h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="installHeading">
+                                        <button class="btn btn-block text-left">
+                                            <h5 class="m-0">2. Install the addon for your browser.</h5>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        <ol type='a'>
+                                            <li class="m-2">Navigate to about:addons from the URL bar.</li>
+                                            <li class="m-2">Click the gear icon next to "Manage your extensions"</li>
+                                            <li class="m-2">
+                                                Select "Install Add-on From File..."
+                                                <img src="./images/addonTab.png">
+                                            </li>
+                                            <li class="m-2">
+                                                Find the downloaded addon and select "Open" (version number may differ).<br>
+                                                <img src="./images/downloadsTab.png">
+                                            </li>
+                                            <li class="m-2">
+                                                Accept the addon's permissions.<br>
+                                                <img src="./images/permissionsTab.png" style="all:unset">
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="invite">
+                                        <button class="btn btn-block text-left" type="button" >
+                                            <h5 class="m-0">3. Enter your invitation code.</h5>
+                                        </button>
+                                    </div>
+                                    <div class="card-body">
+                                        
+                                        If this page does not open, please contact us.
+                                        <img src="./images/inviteScreen.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="chrome-win">
+                        </div>
+                        <div id="firefox-mac">
+                        </div>
+                        <div id="firefox-win">
                         </div>
                     </div>
-
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#automatic-accordion">
-                        <div class="card-body">
-                            <p>a. Download the installer: 
-                                <button class="btn btn-primary" type="button">Download</button>
-                            </p>
-                            <p>b. Double click the exec to run the installer</p>
+                    <div class="col-md-4 mt-5">
+                        <div
+                            class="block promo no-image solid-background medalist"
+                        >
+                            <div class="thumbnail">
+                                <div class="caption">
+                                    <div class="caption-inner">
+                                        <h3>
+                                            Questions? Comments? Concerns?
+                                        </h3>
+                                        <p>
+                                            Don't hesitate to reach out to us at
+                                            <a
+                                                href="mailto:researchlab@icsi.berkeley.edu"
+                                                >researchlab@icsi.berkeley.edu</a
+                                            >
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div id="windows">
-            haha
-        </div>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-   </body>
+        <footer id="universal-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4 col-md-3">
+                        <div class="block logo">
+                            <a href="https://www.berkeley.edu">
+                                <img
+                                    src="./berkeley_brand/img/logo-ucberkeley-white.png"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>

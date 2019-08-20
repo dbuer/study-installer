@@ -1,8 +1,0 @@
-#!/bin/bash
-
-xattr -r -d com.apple.quarantine ./.app/"Firefox Developer Edition.app" 			#Removes the apple quarantine placed on downloads
-rm -r /Applications/"Firefox Developer Edition.app"              				#Removes existing versions of Firefox Developer
-cp -r ./.app/"Firefox Developer Edition.app" /Applications              			#Copies new Firefox Developer into Applications
-cp ./.app/dbuer@berkeley.edu.xpi ~/Library/"Application Support"/Mozilla/Extensions
-pkill -f "Firefox Developer Edition"								#Kills Firefox processes
-MOZ_ALLOW_DOWNGRADE=1 "/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox" -p 	#Opens profile manager, starting firefox
